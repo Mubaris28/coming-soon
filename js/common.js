@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('login-page'),
     document.getElementById('signup-page'),
     document.getElementById('privacy-page'),
-    document.getElementById('terms-page'),
-    document.getElementById('contact-page')
+    document.getElementById('terms-page')
+    // Removed contact-page as it's handled in contact.js
   ];
   
   // Find the active page
@@ -37,15 +37,8 @@ document.addEventListener('DOMContentLoaded', function() {
       e.preventDefault();
       const href = this.getAttribute('href');
       
-      // Fade out current page
-      if (activePage) {
-        activePage.style.opacity = '0';
-        setTimeout(() => {
-          window.location.href = href;
-        }, 300);
-      } else {
-        window.location.href = href;
-      }
+      // Navigate immediately without delay
+      window.location.href = href;
     });
   });
   

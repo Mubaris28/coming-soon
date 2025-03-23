@@ -78,6 +78,11 @@ body {
   opacity: 0;
 }
 
+/* Ensure contact page is styled properly */
+#contact-page {
+  color: white;
+}
+
 .animate-card {
   animation: slideUp 0.8s ease forwards;
   animation-delay: calc(0.1s * var(--animation-order));
@@ -955,4 +960,21 @@ input[type="checkbox"] {
 
 .contact-info .border-b {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Ensure transitions work properly */
+.transition-opacity {
+  transition-property: opacity;
+}
+
+.duration-500 {
+  transition-duration: 500ms;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity-100 {
+  opacity: 1;
 } 
